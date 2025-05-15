@@ -1,11 +1,11 @@
 name: jobs examples
 on:
-  push:
+  workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: create an artifact for reuse (changed2)
+      - name: create an artifact for reuse (changed)
         run: echo "Full featured artifact" > build-result.txt
       - uses: actions/upload-artifact@v4
         with:
